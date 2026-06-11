@@ -1,0 +1,141 @@
+.outreach-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.outreach-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 20px;
+  min-height: 500px;
+}
+
+.outreach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+.outreach-item {
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.outreach-item:hover, .outreach-item.selected {
+  border-color: var(--primary);
+}
+
+.outreach-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.outreach-subject {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.outreach-recipient {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.outreach-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.composer-card .form-group {
+  margin-bottom: 14px;
+}
+
+.composer-card label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.composer-preview {
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.preview-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.preview-content pre, .detail-body {
+  white-space: pre-wrap;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-top: 8px;
+}
+
+.composer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.composer-mode {
+  border-color: var(--primary-light);
+}
+
+.composer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.detail-recipient, .detail-subject {
+  margin-bottom: 12px;
+}
+
+.detail-subject {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.detail-meta {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.empty-panel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .outreach-layout {
+    grid-template-columns: 1fr;
+  }
+}

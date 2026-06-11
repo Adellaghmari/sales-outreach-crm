@@ -1,0 +1,117 @@
+.pipeline-summary {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.summary-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+
+.summary-label { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
+.summary-value { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-top: 4px; display: block; }
+.summary-value.accent { color: var(--secondary); }
+.summary-value.success { color: var(--success); }
+.summary-value.danger { color: var(--danger); }
+
+.kanban-board {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-snap-type: x proximity;
+}
+
+.kanban-column {
+  min-width: 300px;
+  max-width: 320px;
+  flex-shrink: 0;
+  background: var(--bg-muted);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+
+.kanban-column-header {
+  padding: 16px 18px;
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--bg-card);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.kanban-column-header h3 { font-size: 0.92rem; font-weight: 700; color: var(--primary-dark); }
+.kanban-count { font-size: 0.75rem; color: var(--text-light); }
+.kanban-header-values { margin-top: 8px; }
+.kanban-stage-value { font-size: 0.85rem; font-weight: 700; color: var(--primary); display: block; }
+.kanban-expected { font-size: 0.72rem; color: var(--text-muted); }
+
+.kanban-cards { padding: 10px; flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 200px; }
+.kanban-empty { text-align: center; padding: 28px 16px; color: var(--text-light); font-size: 0.85rem; }
+
+.deal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.deal-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.deal-card-title { font-weight: 700; font-size: 0.9rem; line-height: 1.35; color: var(--primary-dark); }
+.deal-card-company { font-size: 0.8rem; color: var(--secondary); margin-top: 4px; font-weight: 600; }
+.deal-card-lead { font-size: 0.75rem; color: var(--text-light); margin-top: 2px; }
+.deal-card-metrics { display: flex; justify-content: space-between; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border-light); }
+.deal-value { font-weight: 700; color: var(--primary); font-size: 0.95rem; }
+.deal-prob { font-size: 0.8rem; color: var(--accent); font-weight: 600; }
+.deal-expected { font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; }
+.deal-close-date { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+.deal-next-action { font-size: 0.75rem; color: var(--text-muted); margin-top: 10px; font-style: italic; }
+.deal-stage-select {
+  margin-top: 12px;
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  color: var(--primary-dark);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235c2d4a' d='M3 5l3 3 3-3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.deal-stage-select:hover {
+  border-color: var(--primary-light);
+}
+
+.deal-stage-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(92, 45, 74, 0.12);
+}
+
+.deal-outcome { margin-top: 10px; padding: 10px; border-radius: var(--radius-sm); font-size: 0.78rem; line-height: 1.5; }
+.deal-outcome.won { background: var(--success-light); color: var(--success); }
+.deal-outcome.lost { background: var(--danger-light); color: #8a3040; }
+.deal-outcome .lesson { margin-top: 4px; font-style: italic; opacity: 0.85; }
+
+.deal-closed { opacity: 0.95; }
+
+@media (max-width: 900px) {
+  .pipeline-summary { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,0 +1,23 @@
+.new-lead-modal .modal-body {
+  padding: 18px 24px 16px;
+}
+
+.new-lead-modal .form-group {
+  margin-bottom: 12px;
+}
+
+.new-lead-modal .form-row {
+  gap: 10px;
+}
+
+.new-lead-modal .form-row .form-group {
+  margin-bottom: 12px;
+}
+
+.new-lead-modal .field-hint {
+  margin-top: 4px;
+}
+
+.new-lead-modal .textarea {
+  min-height: 72px;
+}

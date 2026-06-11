@@ -1,0 +1,8 @@
+.about-content { display: flex; flex-direction: column; gap: 20px; max-width: 820px; }
+.about-section .card-body p { margin-bottom: 12px; line-height: 1.7; color: var(--text-muted); }
+.demo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.demo-grid div { padding: 14px; background: var(--bg); border-radius: var(--radius-sm); font-size: 0.9rem; line-height: 1.5; }
+.demo-grid strong { display: block; color: var(--primary); margin-bottom: 4px; }
+.walkthrough-list { padding-left: 20px; line-height: 1.8; color: var(--text-muted); }
+.walkthrough-list.bullets { list-style: disc; }
+code { background: var(--bg-muted); padding: 2px 6px; border-radius: 4px; font-size: 0.85rem; }

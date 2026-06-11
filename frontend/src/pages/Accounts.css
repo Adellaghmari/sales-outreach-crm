@@ -1,0 +1,124 @@
+.accounts-layout { display: grid; grid-template-columns: 1fr 380px; gap: 20px; align-items: start; }
+.accounts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+
+.account-card {
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.account-card:hover {
+  border-color: var(--primary-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.account-card.selected {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  background: #fffefb;
+}
+
+.account-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.account-card-header h3 { font-size: 1rem; font-weight: 700; color: var(--primary-dark); }
+.account-meta { font-size: 0.8rem; color: var(--text-muted); margin-top: 6px; }
+
+.account-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border-light);
+}
+
+.account-stats .label { display: block; font-size: 0.68rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.04em; }
+.account-stats span:last-child { font-weight: 700; color: var(--primary); font-size: 0.9rem; }
+
+.account-primary, .account-activity {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 10px;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  align-items: baseline;
+}
+
+.account-primary .label, .account-activity .label {
+  font-size: 0.68rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.account-primary span:last-child, .account-activity span:last-child { color: var(--text-muted); }
+
+.account-action {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--secondary-light);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  color: var(--primary-dark);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.account-detail-panel {
+  position: sticky;
+  top: 24px;
+}
+
+.account-detail-card {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.account-detail-title { font-size: 1.05rem; }
+
+.detail-fields { margin-bottom: 8px; }
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--border-light);
+  align-items: center;
+}
+
+.detail-row .label {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.detail-section { margin-top: 18px; margin-bottom: 8px; font-size: 0.85rem; color: var(--primary); font-weight: 700; }
+.detail-link { display: block; padding: 8px 0; color: var(--primary); font-weight: 600; font-size: 0.9rem; }
+.detail-link-inline { color: var(--primary); font-weight: 600; font-size: 0.88rem; }
+.detail-deal { padding: 8px 0; border-bottom: 1px solid var(--border-light); }
+.detail-deal-title { display: block; font-size: 0.88rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 4px; }
+.detail-deal-meta { font-size: 0.82rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.detail-activity-item { padding: 8px 0; border-bottom: 1px solid var(--border-light); }
+.detail-activity-title { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text); }
+.detail-activity-meta { font-size: 0.75rem; color: var(--text-light); margin-top: 2px; display: block; }
+.detail-empty { font-size: 0.85rem; color: var(--text-muted); padding: 4px 0 8px; }
+.detail-action {
+  margin: 14px 0;
+  padding: 12px 14px;
+  background: var(--bg);
+  border-left: 3px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.detail-loading { font-size: 0.88rem; color: var(--text-muted); padding: 8px 0; }
+
+@media (max-width: 900px) {
+  .accounts-layout { grid-template-columns: 1fr; }
+  .account-detail-panel { position: static; }
+  .account-detail-card { max-height: none; }
+}

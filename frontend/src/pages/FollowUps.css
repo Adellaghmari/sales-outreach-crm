@@ -1,0 +1,100 @@
+.followup-sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.followup-section .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-count {
+  background: var(--bg-muted);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.followup-overdue .card-header { color: var(--danger); }
+.followup-today .card-header { color: var(--follow-up); }
+
+.followup-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.followup-card:last-child {
+  border-bottom: none;
+}
+
+.followup-card.is-saving {
+  opacity: 0.85;
+}
+
+.followup-lead {
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.followup-company {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.followup-reason {
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.followup-deal {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.followup-action {
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.followup-card-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.followup-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.followup-buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .followup-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .followup-card {
+    flex-direction: column;
+  }
+
+  .followup-card-side {
+    align-items: flex-start;
+  }
+}
